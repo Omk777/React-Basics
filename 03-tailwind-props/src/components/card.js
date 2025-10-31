@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({channel,btnText="visit me"}) {
+function Card({channel,btnText="visit me",myObj}) {
    console.log(channel);
    
     
@@ -16,9 +16,7 @@ function Card({channel,btnText="visit me"}) {
         <div className="space-y-2">
           <h2 className="text-3xl font-semibold tracking-wide">{channel}</h2>
           <p className="text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-            tempora ipsum soluta amet corporis accusantium aliquid consectetur
-            eaque!
+           {myObj}
           </p>
         </div>
         <button
