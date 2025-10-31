@@ -1,6 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
+
 
 import { useState,useCallback,useEffect,useRef } from 'react'
 
@@ -28,7 +26,6 @@ function App() {
     setPass(pas)
 
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[length,number,char,setPass])
 
   const copyPass=useCallback(()=>{
