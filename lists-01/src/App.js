@@ -44,6 +44,14 @@ function App() {
 
     <ul>
       {
+        myList.map((li,index)=>{
+          return <li key={index}>{li}</li>
+        })
+      }
+    </ul>
+
+    <ul>
+      {
         skills.map((skill,id)=>{
           return <li key={id}>{skill.id} {skill.skillName}</li>
         })

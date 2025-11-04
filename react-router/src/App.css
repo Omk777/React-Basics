@@ -40,36 +40,3 @@
 .read-the-docs {
   color: #888;
 }
-
-
-.form-group {
-  margin-bottom: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.error {
-  color: red;
-  font-size: 0.9rem;
-  margin-top: 4px;
-}
-
-button {
-  padding: 10px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}

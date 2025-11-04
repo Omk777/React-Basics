@@ -6,7 +6,7 @@ function Cond() {
     return (
        <>
        {
-        fruits.length>4 && <h1>
+        fruits.length>0 && <h1>
             You have {fruits.length} fruits in your store
         </h1>
        }

@@ -1,5 +1,5 @@
 {
-  "name": "forms-events",
+  "name": "react-router",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.2.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-hook-form": "^7.66.0",
-    "yup": "^1.7.1"
+    "react-router-dom": "^7.9.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

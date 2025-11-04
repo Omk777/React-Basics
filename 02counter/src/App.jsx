@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+ 
 /* eslint-disable no-unused-vars */
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -13,7 +13,7 @@ function App() {
 
   const addValue=()=>{
     console.log('clicked',counter);
-    // eslint-disable-next-line no-const-assign
+     
     if(counter>=0 && counter<20){
       counter=counter+1
     }else{
