@@ -32,8 +32,12 @@ const TodoList = () => {
 
     }
   return (
-    <div>
-        <h2 className='text-center mb-3'>Your Todos</h2>
+    <div className='container-fluid'>
+        <div className="row">
+            <div className="col-md-6 offset-3">
+                <div className="card">
+                    <div className="card-body">
+                          <h2 className='text-center mb-3'>Your Todos</h2>
         {
             todos.length===0?(
                 <p className='text-center text-muted'>No todos yet! Add one above</p>
@@ -56,6 +60,11 @@ const TodoList = () => {
             )
         }
         <ToastContainer/>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
     </div>
   )
 }
