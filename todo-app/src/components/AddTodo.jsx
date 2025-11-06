@@ -35,13 +35,18 @@ const AddTodo = () => {
 
 
   return (
-    <div>
-        <h3>Add Todo</h3>
+    <div className='container'>
+        <div className="row">
+            <div className="col-md-6">
+                <h3>Add Todo</h3>
         <form onSubmit={handleSubmit}>
             <input type="text" className='form-control my-3' placeholder='Enter todo ...' value={text} onChange={(e)=>{setText(e.target.value)}} required />
             <button className='btn btn-primary w-100'>Add</button>
         </form>
         <ToastContainer/>
+            </div>
+        </div>
+        
     </div>
   )
 }
