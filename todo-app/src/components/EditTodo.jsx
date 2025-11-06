@@ -41,14 +41,22 @@ const EditTodo = () => {
     },1500)
   };
   return (
-    <div className='card p-4 shadow'>
-        <h3>Edit Todo</h3>
+    <div className='container-fluid'>
+       <div className="row">
+        <div className="col-md-6 offset-2">
+            <div className="card">
+                <div className="card-body">
+                     <h3>Edit Todo</h3>
         
         <form onSubmit={handleSubmit}>
             <input type="text" className='form-control my-3' value={text} onChange={(e)=>setText(e.target.value)}  required/>
             <button className='btn btn-success w-100'>Update</button>
         </form>
         <ToastContainer/>
+                </div>
+            </div>
+        </div>
+       </div>
 
     </div>
   )
