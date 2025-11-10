@@ -8,6 +8,8 @@ function AddTodo() {
 
     const dispatch=useDispatch()
 
+    
+
     const addTodoHandler=(e)=>{
             e.preventDefault()
           dispatch(addTodo({ text: input })) // ✅ Must send object with "text"
