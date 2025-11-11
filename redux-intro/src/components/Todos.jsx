@@ -16,7 +16,7 @@ function Todos() {
 
   const handleUpdate = (id) => {
     if (editText.trim() === "") return
-    dispatch(updateTodo({ id, newText: editText }))  // send update action
+    dispatch(updateTodo({ id, newText: editText }))  
     setEditingId(null)
     setEditText("")
   }
@@ -31,7 +31,7 @@ function Todos() {
             className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
           >
             {editingId === todo.id ? (
-              // ✏️ Edit Mode
+            
               <div className="flex w-full justify-between items-center gap-3">
                 <input
                   type="text"
@@ -56,7 +56,7 @@ function Todos() {
                 </button>
               </div>
             ) : (
-              // 📝 Normal Mode
+            
               <>
                 <div className="text-white">{todo.text}</div>
                 <div className="flex gap-2">
