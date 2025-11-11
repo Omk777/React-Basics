@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-        
+        <h1>Redux Toolkit App</h1>
    <AddTodo/>
    <Todos/>
   
