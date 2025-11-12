@@ -15,7 +15,7 @@ const Cart = () => {
     dispatch(remove(id));
     toast.error(`${pro.title} removed from cart 🗑️`);
   } else {
-    toast.info(`Action cancelled ❌`);
+    toast.info(`Product still present in Cart`);
   }
 };
 
