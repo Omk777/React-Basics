@@ -8,6 +8,7 @@ import Cart from './pages/Cart'
 import Navbar from './components/Navbar'
 import { Provider } from 'react-redux'
 import store from './store/store'
+import { ToastContainer } from 'react-toastify'
 function App() {
   
 
@@ -24,6 +25,7 @@ function App() {
       </Routes>
       
       </BrowserRouter>
+      <ToastContainer position="top-right" autoClose={1000} />
 
      </Provider>
 

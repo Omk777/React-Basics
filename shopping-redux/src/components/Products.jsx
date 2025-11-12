@@ -4,6 +4,8 @@ import { add } from '../store/cartSlice'
 import { useDispatch,useSelector } from 'react-redux'
 import { fetchProd } from '../store/productsSlice'
 import { STATUSES } from '../store/productsSlice'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Products = () => {
 
@@ -30,6 +32,7 @@ const Products = () => {
         console.log('Dispatching product',product);
         
        dispatch(add(product))
+       toast.success(`${product.title} added to cart! 🛒`);
         
     }
 

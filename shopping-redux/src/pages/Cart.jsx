@@ -1,14 +1,24 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { remove } from "../store/cartSlice"; 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = () => {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart); 
 
-  const handleRemove = (id) => {
-    dispatch(remove(id)); 
-  };
+ const handleRemove = (id, pro) => {
+  const confirmDelete = window.confirm(`Are you sure you want to remove "${pro.title}" from the cart?`);
+
+  if (confirmDelete) {
+    dispatch(remove(id));
+    toast.error(`${pro.title} removed from cart 🗑️`);
+  } else {
+    toast.info(`Action cancelled ❌`);
+  }
+};
+
 
   return (
     <div>
@@ -23,7 +33,7 @@ const Cart = () => {
               <img src={pro.image} alt={pro.title} />
               <h5>{pro.title}</h5>
               <h5>${pro.price}</h5>
-              <button className="btn" onClick={() => handleRemove(pro.id)}>
+              <button className="btn" onClick={() => handleRemove(pro.id,pro)}>
                 Remove
               </button>
             </div>
