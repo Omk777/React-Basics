@@ -1,0 +1,102 @@
+ [
+  {
+   "id": 1,
+    "countryName": "India",
+   "population": "1.4 Billion",
+    "capital": "New Delhi",
+    "interestingFacts": [
+      "India is the world’s largest democracy.",
+      "The Kumbh Mela is visible from space due to the crowd size."
+    ]
+  },
+  {
+    "id": 2,
+    "countryName": "United States",
+    "population": "331 Million",
+    "capital": "Washington, D.C.",
+    "interestingFacts": [
+      "The U.S. has the world's largest economy.",
+      "Alaska has the longest coastline of any state."
+    ]
+  },
+  {
+    "id": 3,
+    "countryName": "Japan",
+    "population": "125 Million",
+    "capital": "Tokyo",
+    "interestingFacts": [
+      "Japan has more than 6,800 islands.",
+      "Tokyo is the most populated metropolitan area in the world."
+    ]
+  },
+  {
+    "id": 4,
+    "countryName": "Brazil",
+    "population": "214 Million",
+    "capital": "Brasília",
+    "interestingFacts": [
+      "Brazil is home to 60% of the Amazon rainforest.",
+      "Football (soccer) is the most popular sport."
+    ]
+  },
+  {
+    "id": 5,
+    "countryName": "Germany",
+    "population": "83 Million",
+    "capital": "Berlin",
+    "interestingFacts": [
+      "Germany is Europe's largest economy.",
+      "It has over 1,000 varieties of sausages."
+    ]
+  },
+  {
+    "id": 6,
+    "countryName": "Australia",
+    "population": "26 Million",
+    "capital": "Canberra",
+    "interestingFacts": [
+      "Australia is home to the Great Barrier Reef.",
+      "It has more kangaroos than people."
+    ]
+  },
+  {
+    "id": 7,
+    "countryName": "Canada",
+    "population": "38 Million",
+    "capital": "Ottawa",
+    "interestingFacts": [
+      "Canada has the longest international border (with the US).",
+      "It has more lakes than all other countries combined."
+    ]
+  },
+  {
+    "id": 8,
+    "countryName": "France",
+    "population": "65 Million",
+   "capital": "Paris",
+    "interestingFacts": [
+      "France is the most visited country in the world.",
+      "The Louvre is the world’s largest art museum."
+    ]
+  },
+  {
+    "id": 9,
+    "countryName": "China",
+    "population": "1.41 Billion",
+    "capital": "Beijing",
+    "interestingFacts": [
+      "The Great Wall of China is over 13,000 miles long.",
+      "Fortune cookies are actually from America, not China."
+    ]
+  },
+  {
+    "id": 10,
+    "countryName": "South Africa",
+    "population": "60 Million",
+    "capital": "Pretoria (administrative)",
+    "interestingFacts": [
+      "South Africa has 11 official languages.",
+      "It is the only country with 3 capitals."
+    ]
+  }
+]

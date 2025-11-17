@@ -1,0 +1,32 @@
+ [
+  {
+    "icon": "🌍",
+    "title": "Global Reach",
+    "details": "We provide services across 120+ countries with localized support."
+  },
+  {
+    "icon": "⚡",
+    "title": "Fast Performance",
+    "details": "Our platform is optimized for speed, ensuring quick response times."
+  },
+  {
+    "icon": "🔐",
+    "title": "Secure System",
+    "details": "We use industry-standard encryption and security best practices."
+  },
+  {
+    "icon": "💡",
+    "title": "Innovative Solutions",
+    "details": "We build modern, smart, and scalable applications tailored to users."
+  },
+  {
+    "icon": "📈",
+    "title": "Analytics Ready",
+    "details": "Track insights, performance, and user behavior with built-in analytics."
+  },
+  {
+    "icon": "🤝",
+    "title": "24/7 Support",
+    "details": "Our support team is available around the clock to assist you."
+  }
+]
