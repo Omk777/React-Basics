@@ -3,10 +3,15 @@ import { useEffect } from 'react'
 import { getCountrydata } from '../api/postApi'
 // import { data } from 'react-router-dom'
 import CountryCard from '../components/Layout/CountryCard'
+import SearchFilter from '../components/UI/SearchFilter'
 function Country() {
   const [isPending,startTransition]=useTransition()
 
   const [countries,setCountries]=useState([])
+
+  const [search,setSearch]=useState()
+  const [filter,setFilter]=useState('all')
+
 useEffect(()=>{
     startTransition(async()=>{
       const res=await getCountrydata();
@@ -19,11 +24,14 @@ useEffect(()=>{
 // const data=res.json()
 },[])
 
+
+
 if(isPending) return <h1>Loading...</h1>
 
   return (
     <div>
       <section className='country-section'>
+        <SearchFilter search={search} setSearch={setSearch} filter={filter} setFilter={setFilter}/>
           <ul className='grid grid-four-cols'>
             {
               countries.map((Currcountry,index)=>{
