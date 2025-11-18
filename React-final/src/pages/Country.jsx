@@ -28,13 +28,27 @@ useEffect(()=>{
 
 if(isPending) return <h1>Loading...</h1>
 
+const searchCountry=(Country)=>{
+  if(search){
+    return Country.name.common.toLowerCase().includes(search.toLowerCase())
+  }return Country
+}
+
+const filterRegion=(Country)=>{
+  if(filter==='all')return Country;
+  return Country.region===filter
+}
+
+
+const filterCountries= countries.filter((Country)=>searchCountry(Country) && filterRegion(Country));
+
   return (
     <div>
       <section className='country-section'>
         <SearchFilter search={search} setSearch={setSearch} filter={filter} setFilter={setFilter}/>
           <ul className='grid grid-four-cols'>
             {
-              countries.map((Currcountry,index)=>{
+              filterCountries.map((Currcountry,index)=>{
                 return(
                     <CountryCard  Country={Currcountry} key={index}/>
                 )
