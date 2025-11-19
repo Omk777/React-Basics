@@ -16,8 +16,8 @@ function Contact() {
         </h2>
       <div className='contact-wrapper container'>
           <form action={handleSubmit}>
-          <input type="text" required autoComplete='false' placeholder='Enter your name' name='username' className='form-control' />
-          <input type="email" required autoComplete='false' placeholder='Enter your email' name='email' className='form-control' />
+          <input type="text" required autoComplete='off' placeholder='Enter your name' name='username' className='form-control' />
+          <input type="email" required autoComplete='off' placeholder='Enter your email' name='email' className='form-control' />
          <textarea name="message" rows="10" placeholder='Enter your message' autoComplete='off' className='form-control'></textarea>
          <button type='submit' value='send'>Send</button>
         </form>
