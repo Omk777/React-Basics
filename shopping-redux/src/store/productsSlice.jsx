@@ -8,7 +8,8 @@ import React from 'react'
     {
     IDLE:'idle',
     ERROR:'error',
-    LOADING:'loading'
+    LOADING:'loading',
+    Loading:"load"
 }
 )
 
