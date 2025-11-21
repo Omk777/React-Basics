@@ -5,6 +5,7 @@ import authService from './appwrite/auth';
 import { login, logout } from './store/authSlice';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -28,9 +29,9 @@ function App() {
 return (
   <div className="min-h-screen flex flex-col">
     <Header />
-    <main className="flex-grow flex justify-center items-center">
-      {loading ? <p>Loading...</p> : "Your main content here"}
-    </main>
+     <main>
+        TODO:  <Outlet />
+        </main>
     <Footer />
   </div>
 );
