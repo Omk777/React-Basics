@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addPost, editPost, deletePost } from "../redux/Slices/postsSlice";
 import PostCard from "../components/PostsCard";
@@ -7,16 +7,27 @@ import { toast } from "react-toastify";
 const Posts = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [recentPostId, setRecentPostId] = useState(null);
   const posts = useSelector(state => state.posts.posts);
   const dispatch = useDispatch();
 
   const handleAdd = () => {
     if (!title || !body) return toast.error("Enter post title and body");
-    dispatch(addPost({ id: Date.now(), title, body }));
+    const newPost = { id: Date.now(), title, body };
+    dispatch(addPost(newPost));
+    setRecentPostId(newPost.id);
     toast.success("Post added!");
     setTitle("");
     setBody("");
   };
+
+  useEffect(() => {
+    if (!recentPostId) return;
+    const timer = setTimeout(() => setRecentPostId(null), 1600);
+    return () => clearTimeout(timer);
+  }, [recentPostId]);
+
+  const orderedPosts = useMemo(() => [...posts].reverse(), [posts]);
 
   return (
     <div style={{
@@ -95,15 +106,16 @@ const Posts = () => {
         </button>
       </div>
       <div>
-        {posts.length === 0 ? (
+        {orderedPosts.length === 0 ? (
           <p style={{ textAlign: "center", color: "#7c8392" }}>No posts yet. Write your first post!</p>
         ) : (
-          posts.map(post => (
+          orderedPosts.map(post => (
             <PostCard
               key={post.id}
               post={post}
               onEdit={(updatedPost) => dispatch(editPost(updatedPost))}
               onDelete={(id) => dispatch(deletePost(id))}
+              isNew={recentPostId === post.id}
             />
           ))
         )}
