@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addTask, editTask, deleteTask } from "../redux/Slices/taskSlice";
 import TaskCard from "../components/TaskCard";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const Tasks = () => {
   const [title, setTitle] = useState("");
@@ -40,7 +40,6 @@ const Tasks = () => {
           boxShadow: "0 35px 70px rgba(15, 23, 42, 0.15)"
         }}
       >
-        <ToastContainer />
         <header style={{ textAlign: "center", marginBottom: "32px" }}>
           <p style={{ margin: 0, letterSpacing: ".35em", textTransform: "uppercase", color: "#22c55e", fontWeight: 700 }}>
             Tasks
