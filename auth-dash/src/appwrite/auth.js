@@ -4,6 +4,7 @@ import conf from "../conf/conf";
 import { Client,Account,ID } from "appwrite";
 
 export class AuthService{
+    
     client=new Client();
     account
 
@@ -14,6 +15,8 @@ export class AuthService{
         .setProject(conf.appwriteProjectId)
         this.account=new Account(this.client)
     }
+
+    
 
     async createAccount({email,password,name}){
       
@@ -43,7 +46,8 @@ export class AuthService{
        try {
             return    await this.account.get()
        } catch (error) {
-            throw error;
+         if (error.code === 401) return null; 
+            return null;
        } 
     }
     async logout(){
@@ -55,9 +59,13 @@ export class AuthService{
     }
 }
 
+
+
+
+
+
 const authService=new AuthService();
 
 export default  authService;
 
-console.log("Appwrite URL from conf:", conf.appwriteUrl);
-console.log("Project ID from conf:", conf.appwriteProjectId);
+

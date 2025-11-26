@@ -24,7 +24,7 @@ export class Service {
     try {
       return await this.databases.createDocument(
         conf.appwriteDatabaseId,
-        conf.appwriteTableId, // Use tableId instead of collectionId
+        conf.appwriteCollectionId, // Use tableId instead of collectionId
         ID.unique(),          // Unique ID for new document
         {
           title,
@@ -44,7 +44,7 @@ export class Service {
     try {
       return await this.databases.updateDocument(
         conf.appwriteDatabaseId,
-        conf.appwriteTableId, // tableId
+        conf.appwriteCollectionId, // tableId
         id,                    // Document ID
         {
           title,
@@ -62,7 +62,7 @@ export class Service {
     try {
       await this.databases.deleteDocument(
         conf.appwriteDatabaseId,
-        conf.appwriteTableId,
+        conf.appwriteCollectionId,
         id
       );
       return true;
@@ -75,7 +75,7 @@ export class Service {
     try {
       return await this.databases.getDocument(
         conf.appwriteDatabaseId,
-        conf.appwriteTableId,
+        conf.appwriteCollectionId,
         id
       );
     } catch (error) {
@@ -87,7 +87,7 @@ export class Service {
     try {
       return await this.databases.listDocuments(
         conf.appwriteDatabaseId,
-        conf.appwriteTableId,
+        conf.appwriteCollectionId,
         queries
       );
     } catch (error) {
@@ -119,6 +119,13 @@ export class Service {
       throw error;
     }
   }
+
+      getFilePreview(fileId){
+        return this.bucket.getFilePreview(
+            conf.appwriteBucketId,
+            fileId
+        )
+    }
 }
 
 // Export singleton instance
